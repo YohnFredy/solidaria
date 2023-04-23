@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Office\Solidaria;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +27,5 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('solidaria',[Solidaria::class, 'index'])->name('office.solidaria');
