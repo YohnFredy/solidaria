@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Office\Response;
 use App\Http\Controllers\Office\Solidaria;
 use Illuminate\Support\Facades\Route;
 
@@ -29,3 +30,4 @@ Route::middleware([
 });
 
 Route::get('solidaria',[Solidaria::class, 'index'])->name('office.solidaria');
+Route::get('response-payu',[Response::class, 'index']);
