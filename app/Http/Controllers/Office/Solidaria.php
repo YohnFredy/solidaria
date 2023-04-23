@@ -13,21 +13,19 @@ class Solidaria extends Controller
 
         $user = Auth::user();
 
-        $merchantId = env('PAYU_MERCHANTID');
-        $ApiKey = env('PAYU_APIKEY');
+        /* $merchantId = env('PAYU_MERCHANTID');
+        $ApiKey = env('PAYU_APIKEY'); */
+        $merchantId = "508029";
+        $ApiKey = "4Vj8eK4rloUd272L48hsrarnUA";
 
         $numero_aleatorio = random_int(1, 10000);
-        $referenceCode = "pago00".$numero_aleatorio;
+        $referenceCode = "pago00" . $numero_aleatorio;
         $amount = 15;
         $currency = "USD";
-       
 
-        $firma= $ApiKey."~".$merchantId."~".$referenceCode."~".$amount."~".$currency;
-        $signature= md5($firma);
+        $firma = $ApiKey . "~" . $merchantId . "~" . $referenceCode . "~" . $amount . "~" . $currency;
+        $signature = md5($firma);
 
-
-
-
-        return view('office.solidaria', compact('user','signature', 'referenceCode','merchantId' ));
+        return view('office.solidaria', compact('user', 'signature', 'referenceCode', 'merchantId'));
     }
 }
