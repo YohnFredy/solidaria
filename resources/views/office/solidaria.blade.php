@@ -22,6 +22,7 @@
             <input name="confirmationUrl" type="hidden" value="https://octopus-app-zutpq.ondigitalocean.app/confirmation-payu">
             {{-- <input name="Submit"          type="submit"  value="Send" > --}}
             <x-btn name="Submit">Enviar</x-btn>
+           {{--  hola --}}
         </form>
         {{ $signature }}
     </div>

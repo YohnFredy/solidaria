@@ -87,15 +87,15 @@ class ConfirmationPayu extends Controller
          https://octopus-app-zutpq.ondigitalocean.app/confirmation-payu?&value=10&merchant_id=508029&reference_sale=20&currency=USD&state_pol=6
  */
 
-        Proof::create([
+        /* Proof::create([
             'shipping_cost' => 111,
             'merchant_id' => 111,
             'reference_sale' => 11,
             'currency' => 11,
             '$state_pol' => 11,
         ]);
-
-        /* if (strtoupper($sign) == strtoupper($firmacreada)) {
+ */
+        if (strtoupper($sign) == strtoupper($firmacreada)) {
 
             Proof::create([
                 'shipping_cost' => $value,
@@ -112,6 +112,6 @@ class ConfirmationPayu extends Controller
                 'currency' => 11,
                 '$state_pol' => 11,
             ]);
-        } */
+        }
     }
 }

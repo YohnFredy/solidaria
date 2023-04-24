@@ -14,8 +14,8 @@ class VerifyCsrfToken extends Middleware
     protected $except = [
 
         'confirmation-payu',
+        /* 'stripe/*', */
     ];
 }
-/* 'stripe/*',
-        'http://example.com/foo/bar',
-        'http://example.com/foo/*' */
+
+      
