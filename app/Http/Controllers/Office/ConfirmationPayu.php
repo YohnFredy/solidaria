@@ -105,12 +105,15 @@ class ConfirmationPayu extends Controller
                 '$state_pol' => $state_pol,
             ]);
         } else {
+            $requestData = $request->all();
+            $requestDataString = json_encode($requestData);
+           
             Proof::create([
-                'shipping_cost' => 111,
-                'merchant_id' => 111,
-                'reference_sale' => 11,
-                'currency' => 11,
-                '$state_pol' => 11,
+                'shipping_cost' => 22,
+                'merchant_id' => 22,
+                'reference_sale' => $requestDataString,
+                'currency' => 22,
+                '$state_pol' => 22,
             ]);
         }
     }
