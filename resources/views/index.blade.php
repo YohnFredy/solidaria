@@ -21,7 +21,7 @@
     </style>
 
     <div class="relative">
-        {{-- <img class=" w-full shadow-md" src="{{ asset('storage/empresariotable.jpg') }}" alt=""> --}}
+        <img class=" w-full shadow-md" src="{{ asset('storage/empresariotable.jpg') }}" alt="">
         <div class="absolute posicion ">
             <div class=" text-center text-white text-xl md:text-3xl lg:text-4xl">
                 <p>La mejor manera de crecer</p>
@@ -58,7 +58,7 @@
 
                         Al utilizar los servicios de AppPlus, se tiene la garantía de contar con un servicio seguro,
                         fácil de utilizar y con una atención de primera. Cada usuario es importante para la comunidad de
-                        AppPlus y se asegura que se sientan cómodos y satisfechos con los servicios ofrecidos. 
+                        AppPlus y se asegura que se sientan cómodos y satisfechos con los servicios ofrecidos.
                     </p>
                 </div>
             </div>
@@ -88,8 +88,8 @@
                         Economía Solidaria
                     </p>
                     <p class=" text-center text-gray-600 mt-4">
-                        Únete al club ganador y crea una fuente de trabajo de manera práctica. 
-                        Participa en los 
+                        Únete al club ganador y crea una fuente de trabajo de manera práctica.
+                        Participa en los
                         sorteos que se realizan constantemente.
                     </p>
                 </div>
@@ -119,7 +119,8 @@
                         Domicilios
                     </p>
                     <p class=" text-center text-gray-600 mt-4">
-                        Servicio rápido y de calidad con opciones y promociones continuas a través de nuestros aliados en restaurantes, droguerías y almacenes, entre otros.
+                        Servicio rápido y de calidad con opciones y promociones continuas a través de nuestros aliados
+                        en restaurantes, droguerías y almacenes, entre otros.
                     </p>
                 </div>
             </div>
@@ -132,8 +133,10 @@
                         Tienda
                     </p>
                     <p class=" text-center text-gray-600 mt-4">
-                        
-                        Con nuestra tienda en línea, podrás disfrutar de la comodidad de recibir una amplia variedad de productos. Precios justos y promociones atractivas, garantizando siempre la calidad y satisfacción de nuestros clientes.
+
+                        Con nuestra tienda en línea, podrás disfrutar de la comodidad de recibir una amplia variedad de
+                        productos. Precios justos y promociones atractivas, garantizando siempre la calidad y
+                        satisfacción de nuestros clientes.
                     </p>
                 </div>
             </div>
