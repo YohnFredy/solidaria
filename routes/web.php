@@ -33,6 +33,7 @@ Route::middleware([
 
 Route::get('solidaria',[Solidaria::class, 'index'])->name('office.solidaria');
 Route::get('response-payu',[Response::class, 'index']);
-Route::get('confirmation-payu',[ConfirmationPayu::class, 'index']);
+Route::post('confirmation-payu',[ConfirmationPayu::class, 'index']);
+
 
 Route::get('proof',[Proof::class, 'show']);
