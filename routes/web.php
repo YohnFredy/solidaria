@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\Office\ConfirmationPayu;
 use App\Http\Controllers\Office\Response;
 use App\Http\Controllers\Office\Solidaria;
+use App\Http\Controllers\Proof;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,3 +33,6 @@ Route::middleware([
 
 Route::get('solidaria',[Solidaria::class, 'index'])->name('office.solidaria');
 Route::get('response-payu',[Response::class, 'index']);
+Route::get('confirmation-payu',[ConfirmationPayu::class, 'index']);
+
+Route::get('proof',[Proof::class, 'show']);
