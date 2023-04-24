@@ -17,7 +17,7 @@ class Solidaria extends Controller
         $ApiKey = env('PAYU_APIKEY');
 
         $numero_aleatorio = random_int(1, 10000);
-        $referenceCode = "pago00".$numero_aleatorio;
+        $referenceCode = $numero_aleatorio;
         $amount = 15;
         $currency = "USD";
        

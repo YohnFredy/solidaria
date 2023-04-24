@@ -1,6 +1,5 @@
 {{$resul}}
-
-
+<br><br>
 
 <form action="https://octopus-app-zutpq.ondigitalocean.app/confirmation-payu" method="POST">
 

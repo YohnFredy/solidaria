@@ -25,7 +25,17 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'apellido',
+        'cedula',
         'email',
+        'usuario',
+        'sexo',
+        'f_nacimiento',
+        'country_id',
+        'state_id',
+        'city',
+        'direccion',
+        'telefono',
         'password',
     ];
 
@@ -58,4 +68,36 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function unilevels(){
+        return $this->hasMany(Unilevel::class);
+    }
+
+    public function binaries(){
+        return $this->hasMany(Binary::class);
+    }
+
+    public function quantity(){
+        return $this->hasOne(Quantity::class);
+    }
+
+    public function statu(){
+        return $this->hasOne(State::class);
+    }
+
+    public function sales(){
+        return $this->hasMany(Sale::class);
+    }
+
+    public function addPoints(){
+        return $this->hasMany(Point::class);
+    }
+
+    public function points(){
+        return $this->hasMany(Point::class);
+    }
+
+    public function country(){
+        return $this->hasOne(Country::class);
+    }
 }
