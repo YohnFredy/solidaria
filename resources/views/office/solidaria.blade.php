@@ -19,7 +19,7 @@
             <input name="test" type="hidden" value="1">
             <input name="buyerEmail" type="hidden" value="{{ $user->email }}">
             <input name="responseUrl" type="hidden" value="https://octopus-app-zutpq.ondigitalocean.app/response-payu">
-            {{-- <input name="confirmationUrl" type="hidden" value="http://www.test.com/confirmation"> --}}
+            <input name="confirmationUrl" type="hidden" value="https://octopus-app-zutpq.ondigitalocean.app/confirmation-payu">
             {{-- <input name="Submit"          type="submit"  value="Send" > --}}
             <x-btn name="Submit">Enviar</x-btn>
         </form>
