@@ -23,3 +23,6 @@
     <input type="file" name="imagen">
     <button type="submit">Cargar imagen</button>
 </form>
+
+
+<img src="{{ asset('img/foto familia.jpg') }}" alt="">
