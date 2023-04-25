@@ -41,5 +41,6 @@ Route::get('solidaria',[Solidaria::class, 'index'])->name('office.solidaria');
 Route::get('response-payu',[Response::class, 'index']);
 Route::post('confirmation-payu',[ConfirmationPayu::class, 'index']);
 
+Route::post('/upload-image', [Proof::class, 'upload'])->name('upload.image');
 
 Route::get('proof',[Proof::class, 'show']);
