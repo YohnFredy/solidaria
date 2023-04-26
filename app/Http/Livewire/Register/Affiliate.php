@@ -61,7 +61,7 @@ class Affiliate extends Component
     }
 
 
-    public function processCaptcha($token)
+   /*  public function processCaptcha($token)
     {
         $response = Http::post('https://www.google.com/recaptcha/api/siteverify?secret=' . env("RECAPTCHA_CLAVE_SECRETA") . '&response=' . $token);
         $this->captcha = $response->json()['score'];
@@ -69,7 +69,7 @@ class Affiliate extends Component
         if ($this->captcha >= 0.7) {
             $this->store();
         }
-    }
+    } */
 
     public function store()
     {
