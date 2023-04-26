@@ -1,25 +1,6 @@
 <div>
 
-
-    <div class=" md:col-span-3 relative z-0 mb-6 w-full group">
-        <x-input-2 type="text" wire:model.lazy="name" name="nombre" required />
-        <x-label-2 for="nombre">Nombre:</x-label-2>
-        @error('name')
-            <span class="error text-sm text-rojo-500 font-semibold">*{{ $message }}</span>
-        @enderror
-    </div>
-    <div class="md:col-span-3 relative z-0 mb-6 w-full group">
-        <x-input-2 wire:model.lazy="apellido" type="text" name="apellido" />
-        <x-label-2 for="apellido">Apellido:</x-label-2>
-        @error('apellido')
-            <span class="error text-sm text-rojo-500 font-semibold">*{{ $message }}</span>
-        @enderror
-    </div>
-
-
-
-
-    {{-- <form autocomplete="off" wire:submit.prevent="$emit('executeCaptchaValidation')">
+    <form autocomplete="off" wire:submit.prevent="$emit('executeCaptchaValidation')">
 
         <div class="grid md:grid-cols-6 mt-6 gap-x-4 gap-y-1">
             <div class=" md:col-span-3 relative z-0 mb-6 w-full group">
@@ -125,8 +106,8 @@
                 @enderror
             </div>
             <div class="md:col-start-1 md:col-span-3 relative z-0 mb-6 w-full group">
-                <x-input-2 autocomplete="new-password" wire:model.debounce.1s="password" type="password" name="password"
-                    required />
+                <x-input-2 autocomplete="new-password" wire:model.debounce.1s="password" type="password"
+                    name="password" required />
                 <x-label-2 for="password">Password:</x-label-2>
                 @error('password')
                     <span class="error text-sm text-rojo-500 font-semibold">*{{ $message }}</span>
@@ -154,15 +135,15 @@
         </div>
 
 
-       @livewire('register.terminos-afiliacion')
+        @livewire('register.terminos-afiliacion')
 
         <x-btn class=" w-full mt-4">
             Registrar
         </x-btn>
-    </form> --}}
+    </form>
 
 
-    {{-- <x-dialog-modal wire:model="modal">
+    <x-dialog-modal wire:model="modal">
         <x-slot name="title">
         </x-slot>
         <x-slot name="content">
@@ -178,14 +159,14 @@
                 </x-btn>
             </div>
         </x-slot>
-    </x-dialog-modal> --}}
+    </x-dialog-modal>
 
-    {{-- @push('js')
-        <script src="https://www.google.com/recaptcha/api.js?render={{env('RECAPTCHA_CLAVE_SITIO')}}"></script>
+    @push('js')
+        <script src="https://www.google.com/recaptcha/api.js?render={{ env('RECAPTCHA_CLAVE_SITIO') }}"></script>
         <script>
             Livewire.on('executeCaptchaValidation', () => {
                 grecaptcha.ready(function() {
-                    grecaptcha.execute('{{env("RECAPTCHA_CLAVE_SITIO")}}' , {
+                    grecaptcha.execute('{{ env('RECAPTCHA_CLAVE_SITIO') }}', {
                         action: 'submit'
                     }).then(function(token) {
                         @this.emitSelf('captchaResponse', token);
@@ -193,9 +174,8 @@
                 });
             })
         </script>
-    @endpush  --}}
+    @endpush
 
 
 
 </div>
-
