@@ -7,11 +7,13 @@ use App\Models\Proof as ModelsProof;
 use App\Models\State;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class Proof extends Controller
 {
 
     public function create(){
+
         User::create([
             'name' => 'fredy',
             'apellido' => 'guapacha',
@@ -22,7 +24,9 @@ class Proof extends Controller
             'state_id' => 1,
             'city' => 'Tuluá',
             'direccion' => 'calle busquela',
-            'telefono' => 3145207814
+            'telefono' => 3145207814,
+            'email_verified_at' => now(),
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
         ]);
 
         Country::create([
