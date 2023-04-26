@@ -18,5 +18,22 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+
+        \App\Models\User::factory()->create([
+            'name' => 'fredy',
+            'apellido' => 'guapacha',
+            'cedula' => 94154629,
+            'email' => 'fredy.guapacha@gmail.com',
+            'usuario' => 'master',
+            'country_id' => 1,
+            'state_id' => 1,
+            'city' => 'Tuluá',
+            'direccion' => 'calle busquela',
+            'telefono' => 3145207814
+        ]);
+
+        \App\Models\Country::factory(1)->create();
+        \App\Models\State::factory(1)->create();
     }
 }
