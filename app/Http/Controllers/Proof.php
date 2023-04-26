@@ -15,18 +15,22 @@ class Proof extends Controller
     public function create(){
 
         User::create([
-            'name' => 'fredy',
-            'apellido' => 'guapacha',
-            'cedula' => 94154629,
+            
+            'name' => 'Yohn Fredy',
+            'apellido' =>  'guapacha',
             'email' => 'fredy.guapacha@gmail.com',
             'usuario' => 'master',
+            'sexo' => 'masculino',
+            'email_verified_at' => now(),
             'country_id' => 1,
             'state_id' => 1,
-            'city' => 'Tuluá',
-            'direccion' => 'calle busquela',
-            'telefono' => 3145207814,
-            'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+            'city' => 'tulua',
+            'direccion' => 'calle buque',
+            'telefono' => '314526',  
+   
+           /*  'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password */
+            'password' => bcrypt('123'), // password */
+            'remember_token' => Str::random(10),
         ]);
 
         Country::create([
