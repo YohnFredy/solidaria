@@ -14,7 +14,7 @@ use Livewire\Component;
 
 class Affiliate extends Component
 {
-   /*  protected $listeners = ['captchaResponse' => 'processCaptcha'];
+   protected $listeners = ['captchaResponse' => 'processCaptcha'];
 
 
     public $name, $apellido, $cedula, $email, $usuario, $sexo, $f_nacimiento, $countries, $states = [],  $country_id = '', $state_id = '', $city = "", $direccion, $telefono, $password, $password_confirmation,  $sponsor, $side;
@@ -206,7 +206,7 @@ class Affiliate extends Component
     public function cerrar()
     {
         return redirect()->to('/');
-    } */
+    } 
 
 
     public function render()

@@ -1,5 +1,5 @@
 <div>
-    {{-- <form autocomplete="off" wire:submit.prevent="$emit('executeCaptchaValidation')">
+    <form autocomplete="off" wire:submit.prevent="$emit('executeCaptchaValidation')">
 
         <div class="grid md:grid-cols-6 mt-6 gap-x-4 gap-y-1">
             <div class=" md:col-span-3 relative z-0 mb-6 w-full group">
@@ -160,7 +160,7 @@
         </x-slot>
     </x-dialog-modal>
 
-    @push('js')
+    {{-- @push('js')
         <script src="https://www.google.com/recaptcha/api.js?render={{env('RECAPTCHA_CLAVE_SITIO')}}"></script>
         <script>
             Livewire.on('executeCaptchaValidation', () => {
@@ -173,9 +173,9 @@
                 });
             })
         </script>
-    @endpush --}}
+    @endpush  --}}
 
 
-    hola toca asi
+
 </div>
 
