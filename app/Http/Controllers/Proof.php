@@ -45,16 +45,11 @@ class Proof extends Controller
     }
 
 
-
-
-
     public function show(){
         $resul = ModelsProof::all();
 
         return view('proof', compact('resul'));
     }
-
-
 
     public function upload(Request $request)
     {
@@ -70,5 +65,9 @@ class Proof extends Controller
 
         return response()->json(['mensaje' => 'La imagen ha sido guardada con éxito']);
 
+    }
+
+    public function prueba(){
+        return view('proof');
     }
 }

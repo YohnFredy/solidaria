@@ -1,5 +1,3 @@
-{{$resul}}
-<br><br>
 
 {{-- <form action="https://octopus-app-zutpq.ondigitalocean.app/confirmation-payu" method="POST">
 
@@ -16,7 +14,7 @@
     <input type="submit" value="Enviar">
 </form> --}}
 
-
+{{-- 
 <form action="{{ route('upload.image') }}" method="POST" enctype="multipart/form-data">
     @csrf
 
@@ -25,4 +23,11 @@
 </form>
 
 
-<img src="{{ asset('img/foto familia.jpg') }}" alt="">
+<img src="{{ asset('img/foto familia.jpg') }}" alt=""> --}}
+
+
+hola que mas 
+
+<br>
+
+@livewire('proof-livewire');
