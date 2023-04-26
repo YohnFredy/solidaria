@@ -23,7 +23,7 @@ class Affiliate extends Component
 
     public $captcha = 0;
 
-    protected $rules = [
+    /* protected $rules = [
         'name' => 'required|string|min:3|max:100',
         'apellido' => 'max:100',
         'cedula' => 'max:12',
@@ -34,14 +34,14 @@ class Affiliate extends Component
         'telefono' => 'required|min:5|max:100',
         'password' => 'required|string|min:8|',
         "password_confirmation" => 'required|same:password',
-    ];
+    ]; */
 
-    protected $validationAttributes = [
+    /* protected $validationAttributes = [
         'name' => 'Nombre',
         'city' => 'ciudad',
         'direccion' => 'dirección',
         'telefono' => 'teléfono'
-    ];
+    ]; */
 
     public function mount()
     {
@@ -54,11 +54,11 @@ class Affiliate extends Component
         $this->reset(['state_id']);
     }
 
-    public function updated($propertyName)
+   /*  public function updated($propertyName)
     {
         $this->usuario = str_replace(' ', '', $this->usuario);
         $this->validateOnly($propertyName);
-    }
+    } */
 
 
    /*  public function processCaptcha($token)
@@ -71,7 +71,7 @@ class Affiliate extends Component
         }
     } */
 
-    public function store()
+   /*  public function store()
     {
         $this->validate();
 
@@ -201,12 +201,12 @@ class Affiliate extends Component
         $this->reset(['name', 'apellido', 'cedula', 'email', 'usuario', 'sexo', 'f_nacimiento', 'country_id', 'state_id', 'city', 'direccion', 'telefono', 'password', 'password_confirmation']);
 
         $this->modal = true;
-    }
+    } */
 
-    public function cerrar()
+    /* public function cerrar()
     {
         return redirect()->to('/');
-    } 
+    }  */
 
 
     public function render()
