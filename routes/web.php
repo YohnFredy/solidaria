@@ -44,4 +44,4 @@ Route::post('confirmation-payu', [ConfirmationPayu::class, 'index']);
 
 Route::post('/upload-image', [Proof::class, 'upload'])->name('upload.image');
 
-Route::get('proof', [Proof::class, 'show']);
+Route::get('proof', [Proof::class, 'create']);

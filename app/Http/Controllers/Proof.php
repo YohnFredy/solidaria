@@ -2,11 +2,44 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Country;
 use App\Models\Proof as ModelsProof;
+use App\Models\State;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class Proof extends Controller
 {
+
+    public function create(){
+        User::create([
+            'name' => 'fredy',
+            'apellido' => 'guapacha',
+            'cedula' => 94154629,
+            'email' => 'fredy.guapacha@gmail.com',
+            'usuario' => 'master',
+            'country_id' => 1,
+            'state_id' => 1,
+            'city' => 'Tuluá',
+            'direccion' => 'calle busquela',
+            'telefono' => 3145207814
+        ]);
+
+        Country::create([
+            'name' => 'Colombia',
+        ]);
+
+        State::create([
+            'country_id' => 1,
+            'name' => 'Valle Del Cauca',
+        ]);
+
+    }
+
+
+
+
+
     public function show(){
         $resul = ModelsProof::all();
 
