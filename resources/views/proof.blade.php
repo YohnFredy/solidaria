@@ -25,11 +25,4 @@
 
 <img src="{{ asset('img/foto familia.jpg') }}" alt=""> --}}
 
-
-hola que mas 
-
-@livewire('register.terminos-afiliacion') 
-
-<br>
-
-@livewire('proof-livewire');
+hola
