@@ -19,9 +19,8 @@
             }
         }
     </style>
-
     <div class="relative">
-        <img class=" w-full shadow-md" src="{{ asset('storage/empresariotable.jpg') }}" alt="">
+        <img class=" w-full shadow-md" src="{{ asset('images/1682656345.jpg') }}" alt="">
         <div class="absolute posicion ">
             <div class=" text-center text-white text-xl md:text-3xl lg:text-4xl">
                 <p>La mejor manera de crecer</p>
