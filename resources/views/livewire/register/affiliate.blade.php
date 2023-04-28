@@ -134,8 +134,7 @@
             </div>
         </div>
 
-
-        {{-- @livewire('register.terminos-afiliacion') --}}
+        @livewire('register.terminos-afiliacion') 
 
         <x-btn class=" w-full mt-4">
             Registrar

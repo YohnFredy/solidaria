@@ -28,6 +28,8 @@
 
 hola que mas 
 
+@livewire('register.terminos-afiliacion') 
+
 <br>
 
 @livewire('proof-livewire');
