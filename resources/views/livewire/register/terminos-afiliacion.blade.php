@@ -34,7 +34,7 @@
         </x-slot>
 
         <x-slot name="content">
-            <x-terminos-y-condiciones />
+            <x-terminos_condiciones />
         </x-slot>
 
         <x-slot name="footer">
@@ -43,5 +43,5 @@
             </x-btn>
         </x-slot>
     </x-confirmation-modal>
-    
+
 </div>
