@@ -25,4 +25,5 @@
 
 <img src="{{ asset('img/foto familia.jpg') }}" alt=""> --}}
 
-hola
+
+<x-terminos-y-condiciones />
