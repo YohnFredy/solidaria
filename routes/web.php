@@ -2,10 +2,14 @@
 
 use App\Http\Controllers\ImageUploadController;
 use App\Http\Controllers\Office\ConfirmationPayu;
+use App\Http\Controllers\Office\IndexController;
 use App\Http\Controllers\Office\Response;
 use App\Http\Controllers\Office\Solidaria;
+use App\Http\Controllers\Office\UnilevelData;
 use App\Http\Controllers\Proof;
 use App\Http\Controllers\Register\Affiliate;
+use App\Http\Livewire\Office\BinaryTree;
+use App\Http\Livewire\Office\UnilevelTree;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,10 +23,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/* Route::get('/', function () {
-    return view('welcome');
-}); */
-
 Route::get('/', function () {
     return view('index');
 })->name('index');
@@ -35,17 +35,23 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-});
 
-Route::get('{sponsor_user}/{user_side}', [Affiliate::class, 'create']);
+Route::get('office', [IndexController::class, 'index'])->name('office.index');
+    Route::get('binary-tree', BinaryTree::class)->name('tree.binary');
+    Route::get('unilevel-tree', UnilevelTree::class)->name('tree.unilevel'); 
+    route::get('unilevel-data', [UnilevelData::class, 'index'])->name('tree.unilevel_data');
+    /* Route::get('Solidaria',[RifaSolidaria::class, 'index'])->name('office.rifa');
+    Route::get('response-payu',[Response::class, 'index']);  */
+});
 
 Route::get('solidaria', [Solidaria::class, 'index'])->name('office.solidaria');
 Route::get('response-payu', [Response::class, 'index']);
 Route::post('confirmation-payu', [ConfirmationPayu::class, 'index']);
 
-
-
 Route::get('proof', [Proof::class, 'prueba']);
 
 Route::get('upload-image', [ ImageUploadController::class, 'index' ]);
 Route::post('upload-image', [ ImageUploadController::class, 'store' ])->name('image.store');
+
+Route::get('{sponsor_user}/{user_side}', [Affiliate::class, 'create']);
+

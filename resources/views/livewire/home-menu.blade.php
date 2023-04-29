@@ -41,7 +41,7 @@
                         </x-nav-link-2>
                     </div>
                     <div class="flex">
-                        <x-nav-link-2 href="{{--{{route('office.index')}}--}}" :active="request()->routeIs('office.index')">
+                        <x-nav-link-2 href="{{route('office.index')}}" :active="request()->routeIs('office.index')">
                             {{ __('Oficina') }}
                         </x-nav-link-2> 
                     </div>
@@ -154,7 +154,7 @@
                 </x-responsive-nav-link-2>
             </div>
             <div class="pb-2 space-y-1">
-                <x-responsive-nav-link-2 href="{{--{{route('office.index')}}--}}" :active="request()->routeIs('office.index')">
+                <x-responsive-nav-link-2 href="{{route('office.index')}}" :active="request()->routeIs('office.index')">
                     {{ __('Oficina') }}
                 </x-responsive-nav-link-2>
             </div> 
