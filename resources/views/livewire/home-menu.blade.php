@@ -31,12 +31,12 @@
                    
 
                    <div class="flex mr-4">
-                        <x-nav-link-2 href="{{--{{route('principal.opportunity')}}--}}" :active="request()->routeIs('principal.opportunity')">
+                        <x-nav-link-2 href="{{route('principal.opportunity')}}" :active="request()->routeIs('principal.opportunity')">
                             {{ __('Oportunidad') }}
                         </x-nav-link-2>
                     </div>
                     <div class="flex mr-4">
-                        <x-nav-link-2 href="{{--{{route('contactanos.index')}}--}}" :active="request()->routeIs('contactanos.index')">
+                        <x-nav-link-2 href="{{route('contactanos.index')}}" :active="request()->routeIs('contactanos.index')">
                             {{ __('Contactanos') }}
                         </x-nav-link-2>
                     </div>
@@ -144,12 +144,12 @@
                 </x-responsive-nav-link-2>
             </div>
             <div class="pb-2 space-y-1">
-                <x-responsive-nav-link-2 href="{{--{{route('principal.opportunity')}}--}}" :active="request()->routeIs('principal.opportunity')">
+                <x-responsive-nav-link-2 href="{{route('principal.opportunity')}}" :active="request()->routeIs('principal.opportunity')">
                     {{ __('Oportunidad') }}
                 </x-responsive-nav-link-2>
             </div>
             <div class="pb-2 space-y-1">
-                <x-responsive-nav-link-2 href="{{--{{route('contactanos.index')}}--}}" :active="request()->routeIs('contactanos.index')">
+                <x-responsive-nav-link-2 href="{{route('contactanos.index')}}" :active="request()->routeIs('contactanos.index')">
                     {{ __('Contactanos') }}
                 </x-responsive-nav-link-2>
             </div>

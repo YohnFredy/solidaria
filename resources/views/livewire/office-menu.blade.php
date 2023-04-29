@@ -61,7 +61,7 @@
                             </div>
                         </div>
                         <div class="mr-4 flex ">
-                            <x-nav-link-2 href="{{-- {{ route('office.rifa') }} --}}" :active="request()->routeIs(/* 'office.rifa' */)">
+                            <x-nav-link-2 href="{{ route('office.solidaria') }}" :active="request()->routeIs(/* 'office.rifa' */)">
                              <i class="fas fa-hands-helping mr-2"></i> Solidaria
                             </x-nav-link-2>
                         </div>

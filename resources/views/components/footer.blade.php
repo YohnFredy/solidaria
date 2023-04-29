@@ -9,19 +9,21 @@
 
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
-        <div class=" grid grid-cols-3">
 
-            <div class=" col-span-1">
+
+        <div class=" grid grid-cols-6">
+
+            <div class="col-span-3 md:col-span-2">
                 <p class=" mt-6 text-center underline underline-offset-4"><strong>NUESTRA </strong> INFORMACIÓN:</p>
 
                 <div class=" text-center">
 
-                   {{-- @livewire('information') --}}
+                    @livewire('information')
 
                 </div>
             </div>
 
-            <div class=" col-span-1">
+            <div class=" col-span-3 md:col-span-2">
                 <p class="text-center underline underline-offset-4 mt-6">
                     <strong>MAYOR</strong> INFORMACIÓN:
                 </p>
@@ -40,7 +42,7 @@
 
                 </div>
             </div>
-            <div class=" col-span-1">
+            <div class="col-span-6 md:col-span-2">
                 <div class=" w-full bg-white bg-opacity-5 rounded-md mt-6 p-4 text-center">
 
                     <p class=" text-white mb-2">Siguenos en: </p>
