@@ -5,18 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Sale extends Model
+class Order extends Model
 {
-    /* approved 4
-    rejected 6
-    Error 104
-    Pending payment 7 */
-
-    const PENDIENTE = 1;
-    const RECIBIDO = 2;
-    const ENVIADO = 3;
-    const ENTREGADO = 4;
-    const ANULADO = 5;
+    const PENDING = 1;
+    const PENDING_payment = 7;
+    const APPROVED = 4;
+    const REJECTED = 6;
+    const EXPIRED = 5;
+    
 
     const REGISTRO = 1;
     const VIRTUAL = 2;
@@ -29,6 +25,10 @@ class Sale extends Model
     use HasFactory;
 
     protected $guarded = ['id', 'created_at', 'updated_at'];
+
+    protected $casts = [
+        'content' => 'json',
+    ];
 
     public function user()
     {

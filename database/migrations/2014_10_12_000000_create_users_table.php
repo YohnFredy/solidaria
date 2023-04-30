@@ -13,19 +13,19 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('apellido')->nullable();
-            $table->string('cedula')->nullable();
-            $table->string('email')->unique();
+            $table->string('name',100);
+            $table->string('apellido', 100)->nullable();
+            $table->string('cedula' ,12)->nullable();
+            $table->string('email' ,100)->unique();
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('usuario')->unique();
+            $table->string('usuario' ,30)->unique();
             $table->enum('sexo', ['masculino', 'femenino'])->nullable();
             $table->date('f_nacimiento')->nullable();
             $table->integer('country_id')->nullable();
             $table->integer('state_id')->nullable();
-            $table->string('city')->nullable();
-            $table->string('direccion')->nullable();
-            $table->string('telefono')->nullable();
+            $table->string('city' ,50)->nullable();
+            $table->string('direccion', 100)->nullable();
+            $table->string('telefono' ,100)->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();

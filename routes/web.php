@@ -4,6 +4,7 @@ use App\Http\Controllers\ContactanosController;
 use App\Http\Controllers\ImageUploadController;
 use App\Http\Controllers\Office\ConfirmationPayu;
 use App\Http\Controllers\Office\IndexController;
+use App\Http\Controllers\Office\PaymentOrder;
 use App\Http\Controllers\Office\Response;
 use App\Http\Controllers\Office\Solidaria;
 use App\Http\Controllers\Office\UnilevelData;
@@ -52,6 +53,7 @@ Route::middleware([
     /* Route::get('Solidaria',[RifaSolidaria::class, 'index'])->name('office.rifa');
     Route::get('response-payu',[Response::class, 'index']);  */
     Route::get('solidaria', [Solidaria::class, 'index'])->name('office.solidaria');
+    Route::get('order', [PaymentOrder::class, 'show'])->name('office.order');
 });
 
 Route::get('response-payu', [Response::class, 'index']);

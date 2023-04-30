@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Sale;
+use App\Models\Order;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -12,19 +12,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('sales', function (Blueprint $table) {
+        Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id')->nullable();
             $table->string('app', 10)->nullable();
             $table->integer('app_id')->nullable();
-            $table->string('contact')->nullable();
-            $table->string('phone')->nullable();
-            $table->enum('status', [Sale::PENDIENTE, Sale::RECIBIDO, Sale::ENVIADO, Sale::ENTREGADO, Sale::ANULADO])->default(Sale::PENDIENTE);
-            $table->enum('asc_points', [Sale::PTS_ASIGNAR, Sale::PTS_ASIGNADOS, Sale::PTS_SUMADOS])->default(Sale::PTS_ASIGNAR);
-            $table->enum('envio_type', [Sale::REGISTRO, Sale::VIRTUAL, Sale::TANGIBLE])->default(Sale::REGISTRO);
-            $table->float('shipping_cost');
+            $table->string('name', 100)->nullable();
+            $table->string('phone' , 100)->nullable();
+            $table->tinyInteger('status')->default(Order::PENDING);
+            $table->tinyInteger('asc_points')->default(Order::PTS_ASIGNAR);
+            $table->tinyInteger('envio_type')->default(Order::REGISTRO);
+            $table->float('costo_total');
             $table->float('iva');
-            $table->float('total');
+            $table->float('sub_total');
             $table->float('pts');
             $table->json('content')->nullable();
 
@@ -50,6 +50,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('sales');
+        Schema::dropIfExists('orders');
     }
 };

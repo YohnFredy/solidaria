@@ -85,8 +85,8 @@ class User extends Authenticatable
         return $this->hasOne(State::class);
     }
 
-    public function sales(){
-        return $this->hasMany(Sale::class);
+    public function orders(){
+        return $this->hasMany(Order::class);
     }
 
     public function addPoints(){

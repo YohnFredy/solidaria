@@ -1,32 +1,39 @@
-<x-app-layout>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+<x-office-layout>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
 
-        @php
-            
-        @endphp
+        <div class=" grid grid-cols-6 gap-x-12">
 
-        <form method="post" action="https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/">
-           
-            <input name="merchantId" type="hidden" value="{{ $merchantId }}">
-            <input name="accountId" type="hidden" value="512321">
-            <input name="description" type="hidden" value="Venta en linea">
-            <input name="referenceCode" type="hidden" value="{{ $referenceCode }}">
-            <input name="amount" type="hidden" value="15">
-            <input name="tax" type="hidden" value="0">
-            <input name="taxReturnBase" type="hidden" value="0">
-            <input name="currency" type="hidden" value="USD">
-            <input name="signature" type="hidden" value="{{ $signature }}">
-            <input name="test" type="hidden" value="1">
-            <input name="buyerEmail" type="hidden" value="{{ $user->email }}">
-            <input name="responseUrl" type="hidden" value="https://octopus-app-zutpq.ondigitalocean.app/response-payu">
-            <input name="confirmationUrl" type="hidden" value="https://octopus-app-zutpq.ondigitalocean.app/confirmation-payu">
-            {{-- <input name="Submit"          type="submit"  value="Send" > --}}
-            <x-btn name="Submit">Enviar</x-btn>
-           {{--  hola --}}
-        </form>
-        {{ $signature }}
+            <div class=" col-span-3">
+
+                <img class="w-full rounded-lg " src="https://www.ecured.cu/images/9/9a/Solidaridad-Humana.jpg"
+                    alt="image description">
+            </div>
+            <div class=" col-span-3">
+
+                <h1 class=" text-lg font-bold uppercase text-gray-900 mb-4">Rifa Solidaria</h1>
+
+                <h1 class=" text-lg font-semibold text-red-500 mb-4">$15.00 </h1>
+
+                <p class=" mb-6">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias perferendis laborum
+                    temporibus quaerat voluptate eligendi minima quam incidunt eaque, libero excepturi officia nulla
+                    accusantium laudantium. Neque cumque impedit ipsum corrupti.</p>
+
+                <h1 class=" text-gray-800 font-bold mb-10">Cant: 1</h1>
+
+
+                @livewire('office.create-order')
+
+             
+            </div>
+
+            <div class=" col-span-3">
+
+            </div>
+
+            <div class=" col-span-3 bg-white p-6 shadow-lg">
+                <h1 class=" text-lg font-bold text-center  mb-4">Descripción </h1>
+                <p class=" text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, necessitatibus? Ducimus dolor dolorem laboriosam doloremque molestias ad error voluptate, voluptas sed nisi voluptates officiis assumenda ratione non velit harum. Magni.</p>
+            </div>
+        </div>
     </div>
-    <br>
-
-
-</x-app-Layout>
+    </x-app-Layout>

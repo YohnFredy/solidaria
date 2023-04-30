@@ -61,7 +61,7 @@
                             </div>
                         </div>
                         <div class="mr-4 flex ">
-                            <x-nav-link-2 href="{{ route('office.solidaria') }}" :active="request()->routeIs(/* 'office.rifa' */)">
+                            <x-nav-link-2 href="{{ route('office.solidaria') }}" :active="request()->routeIs('office.solidaria')">
                              <i class="fas fa-hands-helping mr-2"></i> Solidaria
                             </x-nav-link-2>
                         </div>
@@ -225,6 +225,12 @@
                             href="{{ route('tree.unilevel_data') }}"> <i class="fas fa-sitemap mr-1 "></i>Red
                             Descendiente</a></li>
                 </ul>
+            </div>
+
+            <div class="pt-2 pb-2 space-y-1">
+                <x-responsive-nav-link-2 href="{{ route('office.solidaria') }}" :active="request()->routeIs('office.solidaria')">
+                    <i class="fas fa-hands-helping mr-2"></i> Solidaria
+                </x-responsive-nav-link-2>
             </div>
 
 

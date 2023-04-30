@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('add_points', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('sale_id');
+            $table->unsignedBigInteger('order_id');
             $table->string('side', 6);
 
             $table->foreign('user_id')->references('id')->on('users')->cascadeOnUpdate()->cascadeOnDelete();
-            $table->foreign('sale_id')->references('id')->on('sales')->cascadeOnUpdate()->cascadeOnDelete();
+            $table->foreign('order_id')->references('id')->on('orders')->cascadeOnUpdate()->cascadeOnDelete();
 
             $table->timestamps();
         });

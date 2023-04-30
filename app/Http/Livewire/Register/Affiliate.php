@@ -27,7 +27,7 @@ class Affiliate extends Component
         'name' => 'required|string|min:3|max:100',
         'apellido' => 'max:100',
         'cedula' => 'max:12',
-        'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+        'email' => ['required', 'string', 'email', 'max:100', 'unique:users'],
         'usuario' => ['required', 'string', 'min:3', 'max:17', 'unique:users'],
         'city' => ['min:3', 'max:50'],
         'direccion' => 'max:100',
